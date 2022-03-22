@@ -1,0 +1,7 @@
+.liste {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  background-color: hsl(34, 78%, 91%);
+  border: 5px solid;
+}
