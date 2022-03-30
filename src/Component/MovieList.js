@@ -12,7 +12,11 @@ const MovieList = ({ input }) => {
       <Add addmovie={addMovie} />
       <div className="liste">
         {movie
-          .filter((el) => el.title.toUpperCase().includes(input.toUpperCase()))
+          .filter(
+            (el) =>
+              el.title.toUpperCase().includes(input.toUpperCase()) ||
+              el.rate >= input
+          )
           .map((film) => (
             <MovieCard lista={film} />
           ))}
