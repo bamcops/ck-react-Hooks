@@ -2,7 +2,10 @@ import React, { useState } from "react";
 import { MovieData } from "../constant/Data";
 import MovieCard from "./MovieCard";
 import Add from "./Add";
-const MovieList = ({ input }) => {
+import { Button } from "bootstrap";
+import { useNavigate } from "react-router-dom";
+const MovieList = ({ input }) => { 
+  let navigate=useNavigate
   const [movie, setMovie] = useState(MovieData);
   const addMovie = (newMovie) => {
     setMovie([...movie, newMovie]);
@@ -21,6 +24,7 @@ const MovieList = ({ input }) => {
             <MovieCard lista={film} />
           ))}
       </div>
+      <Button>onClick={() => navigate(-1)}Retour</Button>
     </>
   );
 };

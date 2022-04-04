@@ -1,5 +1,7 @@
+
 import React from "react";
-import { Card } from "react-bootstrap";
+import { Button, Card } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 const MovieCard = ({ lista }) => {
   return (
@@ -12,6 +14,7 @@ const MovieCard = ({ lista }) => {
           <Card.Text>Rate :{lista.rate} </Card.Text>
         </Card.Body>
       </Card>
+      {/* <Link to={`/trailer/${lista.id}`}><Button>Trailer</Button></Link> */}
     </div>
   );
 };
