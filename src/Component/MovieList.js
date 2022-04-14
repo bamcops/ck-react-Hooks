@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import { MovieData } from "../constant/Data";
 import MovieCard from "./MovieCard";
 import Add from "./Add";
-import { Button } from "bootstrap";
+import { Button } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
-const MovieList = ({ input }) => { 
-  let navigate=useNavigate
+const MovieList = ({ input }) => {
+  let navigate = useNavigate;
   const [movie, setMovie] = useState(MovieData);
   const addMovie = (newMovie) => {
     setMovie([...movie, newMovie]);
